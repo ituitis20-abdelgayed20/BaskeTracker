@@ -18,10 +18,6 @@ public class TeamService {
 
     public Team createTeam(Team newTeam) {
         validateTeamNameUniqueness(newTeam.getName());
-        newTeam.setWins(0);
-        newTeam.setLosses(0);
-        newTeam.setTotalGamePlayed(0);
-        newTeam.setTotalScore(0);
         return teamRepository.save(newTeam);
     }
 
